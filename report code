@@ -1,0 +1,218 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{fvextra}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue,
+  citecolor=black
+}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{microtype}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Computer Science Lab}
+\lhead{Elvis Shema}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  {\Large\bfseries Gisma University of Applied Sciences\\[0.3em]
+  School of Computer Science\par}
+  \vspace{1.5cm}
+  {\large  Computer Science Lab\par}
+  \vspace{0.5cm}
+  {\large\itshape Project Report\par}
+  \vspace{2cm}
+  \rule{\linewidth}{0.5pt}\\[0.6em]
+  {\LARGE\bfseries Computer Science Portfolio\par}
+  \rule{\linewidth}{0.5pt}
+  \vspace{2cm}
+  {\large Elvis Shema\par}
+  \vspace{0.4cm}
+  \vspace{0.4cm}
+  {\normalsize BSc Software Engineering\par}
+  \vspace{0.4cm}
+  {\normalsize \today\par}
+  \vfill
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+This report explains the design, development, and content of my personal computer science portfolio, which was created as part of the Computer Science Lab assessment. The main aim of this project was to build a professional portfolio website that presents my technical skills, academic achievements, personal projects, and career goals in a clear and organised way. The website was designed to help future employers learn more about my abilities and experience.
+
+As part of the project, I also created a professional CV using LaTeX. This helped me produce a well formatted and professional looking document while improving my understanding of LaTeX. In addition, all project files were organised in a structured GitHub repository. This allowed me to manage my work properly, keep track of changes, and follow good software development practices. Overall, this project helped me improve both my technical skills and my ability to present my work in a professional way.
+
+
+The portfolio serves as a digital representation of my skills and experiences as a first year BSc Software Engineering student at Gisma University of Applied Sciences in Berlin. It brings together key aspects of my academic journey, including coursework, technical projects, and practical learning experiences. The website also highlights my early professional experience, demonstrating how I have developed important workplace skills such as communication, teamwork, responsibility, and problem solving.
+
+
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Portfolio Website:} \url{https://elviss19.github.io/portfolio/}
+  \item \textbf{Github Repository:} \url{https://github.com/elviss19/portfolio}
+\end{itemize}
+
+\section{Portfolio Website Structure}
+
+\subsection{Overview of Sections}
+
+The portfolio is a page application built entirely in HTML and CSS, that I coded using VS code. It is organised into five main sections, with each section designed to present different parts of my profile to potential employers in a clear and professional way
+
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Hero / Home}: An introduction featuring my name, BSc Software Engineering title, a short personal description, key achievements (2+ years of experience, 5+ completed projects, and fluency in four languages), along with buttons to download my CV or contact me.
+  \item \textbf{Skills \& Services}: A responsive three-column layout highlighting six key skills: Software Development, Data \& Analytics, Event Management, Leadership, Problem Solving, and Multilingual Communication.
+  \item \textbf{About Me}: A two-column layout containing a short biography, my personal philosophy, and a "Day in My Life" bar chart showing how I balance studying, social activities, sports, and rest.
+  \item \textbf{Experience \& Projects}: A vertical timeline presenting my current BSc studies at Gisma University of Applied Sciences, my experience organising gaming tournaments at the American School of Antananarivo, and previous work experience at Camelia and Simba Supermarket in Kigali, Rwanda.
+  \item \textbf{Contact}: Contact information, interests, and a message form allowing potential employers or collaborators to reach out directly.
+\end{enumerate}
+
+\subsection{Navigation}
+
+A fixed top navigation bar provides a smooth scroll that links to each section. JavaScript is used to highlight the currently active section link as the user scrolls. A ``Hire Me'' call-to-action button in the nav anchors directly to the Contact section, optimising the user journey for a potential employer.
+
+\subsection{GitHub Repository Structure}
+
+The project is organised into two separate repositories, each serving a different purpose.
+
+The first repository contains the PDF version of my curriculum vitae (CV). This document includes my personal information, educational background, technical skills, work experience, projects, certifications, and contact details. It acts as the primary professional document that can be downloaded and shared with potential employers.
+
+The second repository contains the complete source code for my personal portfolio website. All website files, including the HTML, CSS, JavaScript, images, and other supporting assets, are stored within the repository's Codespace, making the project easy to access, edit, maintain, and deploy at any time.
+
+\section{Design Decisions}
+
+\subsection{Visual Language}
+
+The website adopts a \textbf{dark brutalist typographic aesthetic}. This was a my  choice to stand out from generic, template heavy portfolios common among students and they also be lookign all similar in most cases. The design system is defined by a small set of CSS custom properties (variables):
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Background:} Near black (\texttt{\#111111}) with layered dark panels (\texttt{\#1a1a1a}, \texttt{\#222222}).
+  \item \textbf{Accent colour:} Burnt orange (\texttt{\#E8622A}), used for headings, icons, interactive hover states, and highlighted statistics. Orange was chosen for its energy and visibility against dark backgrounds, signalling confidence and creativity.
+  \item \textbf{Text:} Off white (\texttt{\#f5f5f0}) for primary content; muted grey (\texttt{\#888880}) for secondary text, creating clear hierarchy without harsh contrast.
+  \item \textbf{Borders:} Subtle semi transparent white (\texttt{rgba(255,255,255,0.08)}) to create depth without visual noise.
+\end{itemize}
+
+\subsection{Typography}
+
+Two Google Fonts are used:
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Unbounded} (weights 400, 700, 900) for all headings, section labels, and logotype. Its wide, geometric letterforms reinforce the bold aesthetic.
+  \item \textbf{DM Sans} (weights 300, 400, 500) for body copy and UI text. A humanist sans serif that ensures readability at small sizes.
+\end{itemize}
+
+This combination creates a balance between a modern, attractive appearance and easy readability. It was chosen intentionally to make the portfolio visually appealing while ensuring that employers can quickly and comfortably read the content, helping to create a strong first impression.
+
+
+\subsection{Layout}
+
+The website uses CSS Grid to organise its main sections, including the hero, skills, about, experience, and contact areas. This layout provides a clean and well structured design while making it easy to arrange content consistently across the page. On smaller screens, the grid automatically adjusts to a single column layout, ensuring the website remains fully responsive and user friendly on tablets and mobile devices.
+
+Using CSS Grid instead of JavaScript layout libraries improves the website's performance by reducing unnecessary scripts. This results in faster loading times, smoother navigation, and code that is simpler to read, maintain, and update.
+
+The navigation bar uses position: fixed, allowing it to remain visible at the top of the page while users scroll through the website. To improve readability and give the interface a modern appearance, a backdrop filter: blur(12px) effect is applied, creating a glass like background that keeps the navigation clear over different page sections without blocking the content underneath. This enhances both the visual design and the overall user experience.
+
+\subsection{Interactivity}
+
+The website includes a small amount of interactivity to improve the user The website includes a small amount of interactivity to improve the user experience without making the interface overly complex. Features such as smooth scrolling allow users to move easily between sections, while a subtle card hover effect provides visual feedback when users interact with different content cards. In addition, a lightweight JavaScript scroll listener automatically highlights the active navigation link, helping users see which section of the website they are currently viewing.
+
+No large JavaScript frameworks or external libraries were used during development. Instead, the website was built using HTML, CSS, and vanilla JavaScript, demonstrating a strong understanding of core web development principles while keeping the website lightweight, fast, and easy to maintain.
+
+\section{Tools and Technologies}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Tool / Technology} & \textbf{Purpose} & \textbf{Rationale} \\
+\midrule
+HTML5 & Page structure and content & Core web standard; no dependencies \\
+CSS3 (Custom Properties) & Styling and layout & Grid, variables, animations \\
+Vanilla JavaScript & Scroll active nav, smooth links & No framework overhead \\
+Google Fonts API & Typography (Unbounded, DM Sans) & Free, performant, versioned \\
+GitHub Pages & Hosting and deployment & Free static hosting, Git integrated \\
+Git / GitHub & Version control, repository & Required by assessment brief \\
+LaTeX (AltaCV) & CV preparation (Overleaf) & Professional typesetting \\
+\bottomrule
+\end{tabular}
+\caption{Technologies used in the portfolio project.}
+\end{table}
+
+\subsection{LaTeX CV}
+
+The CV was prepared in Overleaf using the \textbf{AltaCV} template, customised with a navy and steel blue colour scheme. It includes all relevant personal, academic, and professional information sourced from my actual background: education at Gisma and the American School of Antananarivo, work experience at Camelia and Simba Supermarket, skills, languages, and interests. The compiled PDF is exported and committed to the GitHub repository, making it directly downloadable from the portfolio.
+
+\section{Content}
+
+The content of the portfolio was chosen to represent the most relevant aspects of my profile for a working student or junior software engineering role.
+
+\textbf{Academic projects}: The Projects section highlights two practical software development projects completed as part of my coursework. The first is a Python Library Management System, which was developed using object oriented programming principles and validated with a comprehensive 69 test suite, demonstrating the reliability and quality of the code. The second is a MySQL Hotel Reservation System, which includes a well designed relational database and an Entity Relationship (ER) diagram to illustrate the database structure and relationships.
+
+\textbf{Transferable skills}: Event management and leadership, showed by the gaming tournament and the Sports Council vice presidency, are included because they speak to soft skills that employers value alongside technical ability.
+
+\textbf{Languages}: Kinyarwanda (native), French (fluent), English (fluent), Spanish (conversational), and German (beginner) are listed with a dot scale visual. Being multilingual is a genuine differentiator in Berlin's international tech market.
+
+\textbf{Personal philosophy and ``Day in My Life''}: These elements were included to give the portfolio a human dimension and allow a hiring manager to assess cultural fit, not only technical competence.
+
+\section{Strengths and Weaknesses}
+
+\subsection{Strengths}
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Distinctive visual identity.} The dark brutalist aesthetic is immediately memorable compared to generic Bootstrap or Wix portfolios, which matters in competitive hiring contexts.
+  \item \textbf{Zero dependency implementation.} The entire site is a single HTML file with no build tools, no frameworks, and no backend. This makes it trivially deployable, fast loading, and easy to maintain.
+  \item \textbf{Responsive typography and spacing.} Although a formal media-query breakpoint system was not implemented, the fluid grid and relative units make the layout tolerable across a range of screen sizes.
+  \item \textbf{Integrated CV download.} Providing direct access to the LaTeX-compiled PDF from the hero section reduces friction for a recruiter reviewing the portfolio.
+\end{itemize}
+
+\subsection{Weaknesses}
+
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Limited mobile responsiveness.}: One limitation of the current website is that the two column layouts used in the hero, about, and contact sections do not adapt perfectly on screens smaller than 768 px. Although the website remains usable, the content can appear cramped or uneven on smaller mobile devices. In a future version, the layout will be adjusted so these sections rearrange more smoothly into a single column format on narrow screens. This improvement will provide a better viewing experience, improve readability, and ensure the website is fully responsive across a wider range of screen sizes and devices.
+  \item \textbf{No live project demos.} While projects are described in the experience section, there are no embedded demos, GitHub links per project, or screenshots. Adding these would make the technical claims verifiable to a hiring manager.
+  \item \textbf{Static contact form.} The message form has no backend handler; submissions are not delivered. Connecting it to a service such as Formspree or Netlify Forms would make it functional without requiring a server.
+  \item \textbf{Accessibility.} Another limitation is that the colour contrast between some muted grey text and the dark background may not always provide the best readability for all users. In some areas, the contrast may not fully meet WCAG AA accessibility guidelines, making the content harder to read for users with visual impairments. In a future version, the colour scheme will be reviewed and adjusted to improve text contrast, making the website more accessible, easier to read, and compliant with recognised web accessibility standards.
+\end{itemize}
+
+\section{Future Improvements}
+
+Given more time, the following additions would significantly improve the portfolio:
+
+\begin{enumerate}[leftmargin=*]
+  \item \textbf{Projects section with live links}: A dedicated section showcasing GitHub repositories with descriptions, technologies used, and links to deployed demos or code.
+  \item \textbf{Blog / writing section}: Documenting learning (coursework insights, tutorials, technical reflections) would demonstrate intellectual curiosity and improve SEO.
+  \item \textbf{Full mobile responsiveness}: A mobile-first redesign with tested breakpoints at 480px, 768px, and 1024px.
+  \item \textbf{Dark/light mode toggle}: A JavaScript-powered theme switch to increase accessibility and demonstrate DOM manipulation skills.
+  \item \textbf{Automated CI/CD}: A GitHub Actions workflow to validate HTML, run Lighthouse audits on every push, and auto-deploy to GitHub Pages on merge.
+\end{enumerate}
+
+\section{Conclusion}
+
+This portfolio was created to show both my technical skills and who I am in a clear, practical, and visually interesting way. Every major design choice was made for a reason. For example, I used a dark colour scheme to make the site easier to read and give it a modern look, and I kept JavaScript to a minimum so the website loads quickly and is easier to maintain. The GitHub repository is well organised, includes clear documentation, and uses version control to record the development process from start to finish.
+
+There are still areas that can be improved. The website is not fully responsive on all mobile devices, and the projects section could include more detailed or advanced work. Recognising these weaknesses has helped me identify clear goals for future updates. Overall, the portfolio meets the requirements of the assignment by providing a deployed GitHub Pages website, a professionally formatted LaTeX CV, an explanation of the design decisions, and an honest evaluation of its strengths and areas for improvement.
+
+\end{document}
