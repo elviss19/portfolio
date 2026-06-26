@@ -1,0 +1,163 @@
+\documentclass[10pt,a4paper,withhyper]{altacv}
+
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+\usepackage{paracol}
+
+\iftutex
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{DarkNavy}{HTML}{0D1B2A}
+\definecolor{NavyBlue}{HTML}{1A3A5C}
+\definecolor{SteelBlue}{HTML}{2E6DA4}
+\colorlet{name}{black}
+\colorlet{tagline}{NavyBlue}
+\colorlet{heading}{DarkNavy}
+\colorlet{headingrule}{SteelBlue}
+\colorlet{subheading}{NavyBlue}
+\colorlet{accent}{SteelBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+
+\input{pubs-num}
+\addbibresource{sample.bib}
+
+\begin{document}
+
+\name{Elvis Shema}
+\tagline{Software Engineering Student}
+\photoR{2.8cm}{12703.JPG}
+\personalinfo{%
+  \email{elvisshema19@gmail.com}
+  \phone{+4917673835744}
+  \location{Berlin, Germany}
+}
+
+\makecvheader
+
+\columnratio{0.6}
+
+\begin{paracol}{2}
+
+%% ---- LEFT COLUMN ----
+
+\cvsection{About Me}
+
+A determined and enthusiastic student seeking an opportunity to gain experience in the gaming industry at a well-developed and popular company with friendly, hardworking, and passionate people. Having lived in Madagascar and attended an international school, I bring a globally-informed perspective to everything I do. Currently pursuing a BSc in Software Engineering at GISMA University of Applied Sciences, Berlin.
+
+\cvsection{Projects}
+
+\cvevent{Gaming Tournament Organiser}{American School of Antananarivo}{Senior Year, 2024}{}
+\begin{itemize}
+  \item Planned and executed a school-wide FIFA and Mario Kart tournament with fellow classmates.
+  \item Managed logistics, scheduling, and student participation, resulting in a highly successful event.
+  \item Demonstrated leadership, coordination, and event management skills throughout.
+\end{itemize}
+
+\cvsection{Education}
+
+\cvevent{BSc Software Engineering}{GISMA University of Applied Sciences}{2024 -- Present}{Berlin, Germany}
+\begin{itemize}
+  \item Coursework covering calculus, linear programming, discrete mathematics, and matrix algebra.
+  \item Practical computing skills including LaTeX document preparation and software development fundamentals.
+\end{itemize}
+
+\divider
+
+\cvevent{High School Diploma (IB)}{American School of Antananarivo}{Graduated May 2024}{Antananarivo, Madagascar}
+\begin{itemize}
+  \item IB Diploma
+  \item Sports merit awards, and trophies
+  \item Vice president of the school's Sports Council
+\end{itemize}
+
+\cvsection{A Day of My Life}
+
+\wheelchart{1.5cm}{0.5cm}{%
+  6/8em/accent!30/{Sleep,\\recharge},
+  3/8em/accent!40/Gaming \& football,
+  8/8em/accent!60/Study \& coursework,
+  2/10em/accent/Sports \& fitness,
+  5/6em/accent!20/Family \& friends
+}
+
+%% ---- RIGHT COLUMN ----
+\switchcolumn
+
+\cvsection{My Philosophy}
+
+\begin{quote}
+``Be passionate, stay balanced, and always reflect on where you can grow.''
+\end{quote}
+
+\cvsection{Most Proud Of}
+
+\cvachievement{\faTrophy}{Gaming Tournament}{Organised a successful FIFA \& Mario Kart tournament in senior year, showcasing leadership and teamwork.}
+
+\divider
+
+\cvachievement{\faBriefcase}{Early Work Experience}{Built professional foundations at Camelia and Simba Supermarket before starting university in Germany.}
+
+\divider
+
+\cvachievement{\faGraduationCap}{IB Diploma}{Completed the International Baccalaureate with French and Spanish certificates at a top international school.}
+
+\cvsection{Skills}
+
+\cvtag{Leadership}
+\cvtag{Creativity}\\
+\cvtag{Adaptability}
+\cvtag{Problem Solving}\\
+\cvtag{Stress Management}
+\cvtag{Critical Thinking}
+
+\divider\smallskip
+
+\cvtag{Software Dev}\\
+\cvtag{Event Management}
+\cvtag{Customer Service}
+
+\cvsection{Languages}
+
+\cvskill{French}{5}
+\divider
+
+\cvskill{English}{5}
+\divider
+
+\cvskill{Spanish}{3}
+\divider
+
+\cvskill{Deutsch}{2}
+
+\medskip
+
+\cvsection{Interests}
+
+\cvtag{Football (Premier League)}
+\cvtag{Basketball}\\
+\cvtag{Video Games}
+\cvtag{Software Engineering}\\
+\cvtag{Sports Analytics}
+\cvtag{Technology}
+
+\end{paracol}
+
+\end{document}
